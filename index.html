@@ -330,34 +330,10 @@
             <p class="tagline">The all-in-one cryptocurrency for the modern era</p>
             
             <!-- Features Banner -->
-            <div style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 15px; padding: 20px 30px; margin-bottom: 30px; display: inline-block;">
+            <div style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 15px; padding: 20px 30px; margin-bottom: 40px; display: inline-block;">
                 <p style="font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8;">
                     CASHBACK MODE ✅ &nbsp; AGENT MODE ✅ &nbsp; BUYBACK AND BURN ✅ &nbsp; GITHUB SHARING ✅ &nbsp; TG ✅ &nbsp; WEB ✅
                 </p>
-            </div>
-
-            <div class="cta-section">
-                <button class="btn btn-primary">Buy Now</button>
-                <button class="btn btn-secondary">Learn More</button>
-            </div>
-
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-value">∞</div>
-                    <div class="stat-label">Possibilities</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">24/7</div>
-                    <div class="stat-label">Trading</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">0%</div>
-                    <div class="stat-label">Limits</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">100%</div>
-                    <div class="stat-label">Community</div>
-                </div>
             </div>
 
             <!-- Contract Address -->
@@ -366,45 +342,6 @@
                 <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;">
                     <code style="background: rgba(0, 0, 0, 0.3); padding: 12px 18px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: 0.9rem; color: var(--primary); flex: 1; min-width: 250px; text-align: center; border: 1px solid rgba(255, 215, 0, 0.2);">4gZ29z6m9waA6gwWUxw4Po3LdmAVfeb4oqAHLxBPpump</code>
                     <button id="copyBtn" style="padding: 12px 24px; background: linear-gradient(135deg, var(--primary) 0%, #ffed4e 100%); color: var(--dark); border: none; border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);">COPY</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <h2>Why Choose EVERYTHING?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Decentralized</h3>
-                    <p>Truly peer-to-peer transactions with no central authority. Complete control over your assets.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Instant transactions with minimal fees. Built on cutting-edge blockchain technology.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure</h3>
-                    <p>Military-grade encryption and advanced security protocols keep your coins safe.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Global</h3>
-                    <p>Send and receive from anywhere in the world without borders or restrictions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Community Driven</h3>
-                    <p>Governed by the community. Every holder has a voice in the future of EVERYTHING.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Growth Potential</h3>
-                    <p>Join a vibrant ecosystem with unlimited growth opportunities and innovation.</p>
                 </div>
             </div>
         </div>
@@ -449,15 +386,6 @@
             const glow = document.querySelector('.glow');
             glow.style.setProperty('--mouse-x', (e.clientX / window.innerWidth) * 100 + '%');
             glow.style.setProperty('--mouse-y', (e.clientY / window.innerHeight) * 100 + '%');
-        });
-
-        // CTA Buttons
-        document.querySelector('.btn-primary').addEventListener('click', () => {
-            alert('🚀 Buy button - redirect to DEX (Raydium, Jupiter, etc)');
-        });
-
-        document.querySelector('.btn-secondary').addEventListener('click', () => {
-            document.querySelector('.features').scrollIntoView({ behavior: 'smooth' });
         });
 
         // Copy Contract Address
