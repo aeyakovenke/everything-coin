@@ -329,6 +329,13 @@
             <h1>EVERYTHING COIN</h1>
             <p class="tagline">The all-in-one cryptocurrency for the modern era</p>
             
+            <!-- Features Banner -->
+            <div style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 15px; padding: 20px 30px; margin-bottom: 30px; display: inline-block;">
+                <p style="font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8;">
+                    CASHBACK MODE ✅ &nbsp; AGENT MODE ✅ &nbsp; BUYBACK AND BURN ✅ &nbsp; GITHUB SHARING ✅ &nbsp; TG ✅ &nbsp; WEB ✅
+                </p>
+            </div>
+
             <div class="cta-section">
                 <button class="btn btn-primary">Buy Now</button>
                 <button class="btn btn-secondary">Learn More</button>
@@ -350,6 +357,15 @@
                 <div class="stat">
                     <div class="stat-value">100%</div>
                     <div class="stat-label">Community</div>
+                </div>
+            </div>
+
+            <!-- Contract Address -->
+            <div style="margin-top: 50px; padding: 25px 30px; background: rgba(255, 215, 0, 0.05); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 15px; backdrop-filter: blur(10px);">
+                <p style="text-transform: uppercase; letter-spacing: 2px; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; margin-bottom: 12px;">Contract Address</p>
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                    <code style="background: rgba(0, 0, 0, 0.3); padding: 12px 18px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: 0.9rem; color: var(--primary); flex: 1; min-width: 250px; text-align: center; border: 1px solid rgba(255, 215, 0, 0.2);">4gZ29z6m9waA6gwWUxw4Po3LdmAVfeb4oqAHLxBPpump</code>
+                    <button id="copyBtn" style="padding: 12px 24px; background: linear-gradient(135deg, var(--primary) 0%, #ffed4e 100%); color: var(--dark); border: none; border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 0.9rem; white-space: nowrap; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);">COPY</button>
                 </div>
             </div>
         </div>
@@ -442,6 +458,23 @@
 
         document.querySelector('.btn-secondary').addEventListener('click', () => {
             document.querySelector('.features').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Copy Contract Address
+        const copyBtn = document.getElementById('copyBtn');
+        const caAddress = '4gZ29z6m9waA6gwWUxw4Po3LdmAVfeb4oqAHLxBPpump';
+        
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(caAddress).then(() => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = '✅ COPIED!';
+                copyBtn.style.background = 'linear-gradient(135deg, #00d084 0%, #00ff88 100%)';
+                
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                    copyBtn.style.background = 'linear-gradient(135deg, var(--primary) 0%, #ffed4e 100%)';
+                }, 2000);
+            });
         });
     </script>
 </body>
